@@ -25,6 +25,19 @@ function App() {
 
     return () => clearInterval(interval);
   },[running])
+
+  //using generic
+  function getinput <T>(input:T[]){
+    return input[0];
+  }
+  console.log(getinput<string>(["Aadithya","Niranjan"]));
+
+  //using enum
+  enum statuscode {
+    Success = 500,
+    Failedtoload = 411
+  } 
+  console.log(statuscode.Success);
   return (
     <>
       <div className="p-3 flex justify-center mt-10 mb-44">
